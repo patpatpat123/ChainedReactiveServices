@@ -1,16 +1,28 @@
 package com.example.demo;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.util.List;
 
-	@Data
-	@Builder
-	@NoArgsConstructor
-	@AllArgsConstructor
-	public class CartoonCharacter {
-		Integer id;
-		String name;
-		String species;
-	}
+public class CartoonCharacter {
+
+    private List<Integer> characterIds;
+
+    public CartoonCharacter(List<Integer> characterIds) {
+        this.characterIds = characterIds;
+    }
+
+    public List<Integer> getCharacterIds() {
+        return characterIds;
+    }
+
+    public void setCharacterIds(List<Integer> characterIds) {
+        this.characterIds = characterIds;
+    }
+
+    @Override
+    public String toString() {
+        return "CartoonCharacter{" +
+                "characterIds=" + characterIds +
+                '}';
+    }
+
+}
